@@ -8,7 +8,11 @@
 </head>
 <body>
     <h1>Login Page</h1>
-
+<?php
+if (isset($_GET['error'])) {
+    echo "<p>Invalid username or password. Please try again.</p>";
+}
+?>
     <form method="post" action="process.php">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required>
